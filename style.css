@@ -1,48 +1,81 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     font-family: 'Poppins', sans- serif;
     box-sizing: border-box;
 }
-.container{
-    width:100%;
-    min-height: 100vh;
-    background:linear-gradient(135deg, rgb(105, 33, 157), rgb(164, 16, 164), violet, pink);
-    color:#fff;
-    padding: 10px;
-}
-.calculator{
+
+.container {
     width: 100%;
-    max-width:600px;
-    margin-left:10%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(105, 33, 157), rgb(164, 16, 164), violet, pink);
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    display: flex;
+}
+.container p {
+    position: absolute;
+    align-self: end;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 10%;
     margin-top: 10%;
 }
-.calculator h1{
+
+
+.calculator h1 {
     font-size: 60px;
 }
-.caslculator h1 span{
-    color:#ffff76; 
+
+.calculator h1 span {
+    color: #ffff76;
 }
-.input-box{
+
+.input-box {
     margin: 30px 10px;
-    padding : 5px;
+    padding: 5px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.3);
-    display:flex;
-    align-items:center;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
 }
-.input-box input{
-    flex:1;
-    margin-left:18px;
-    margin-right:10px;
+
+@media (max-width: 768px) {
+    .calculator {
+        width: 80%;
+    }
+
+    .calculator h1 {
+        font-size: 50px;
+        margin-bottom: 60px;
+    }
+
+    .input-box {
+        display: grid;
+        padding: 30px 10px 20px 10px;
+    }
+}
+
+
+.input-box input {
+    flex: 1;
+    margin-left: 18px;
+    margin-right: 10px;
     padding: 10px 20px 13px 20px;
-    border:0;
+    border: 0;
     outline: 0;
     font-size: 18px;
     border-radius: 5px;
     position: relative;
 }
-.input-box button{
+
+.input-box button {
     height: 50px;
     background: #ffff76;
     border: 0;
@@ -50,14 +83,22 @@
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 20px;
-    color:#333;
+    color: #333;
     margin: 20px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#res{
+@media (max-width: 768px) {
+    .input-box button {
+        font-size: 18px;
+        height: auto;
+    }
+}
+
+#res {
     font-size: 20px;
 }
-#res span{
+
+#res span {
     color: #ffff76;
 }
